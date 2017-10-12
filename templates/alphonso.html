@@ -19,7 +19,7 @@
     <p class="paragraph"><b>1. Introduction and data description</b></p> 
     <P class="paragraph"> Different companies apply different strategies for TV commercial broadcasting, according to their target users/customers and the characteristics of their products. In order to optimize the investment of the TV commercial broadcasting, it is important for a company to quickly understand its current TV commercial broadcasting pattern and compare with its top competitors. 
 
-    In order to setup a general pipeline to discuss the different patterns in TV commerical broadcast between different brands, I will show an analysis to discuss the three-month (07/2017-10/2017) TV commerical data for 7 automobile brands including Acura, BMW, Mercedes-Benz, Honda, Toyota, Ford and Nissan. All the data are accessible from <a href="https://insights.alphonso.tv">Alphonso.tv</a>. The original data includes 23 columns, which describes the characteristic of the products, boardcasting time, show and network for each TV commercial of each brands. At last, a general method to discuss any group of brands will be proposed.</p>
+    In order to propose a general pipeline to discuss the different patterns in TV commerical broadcast between different brands, I will show an analysis to discuss the three-month (07/2017-10/2017) TV commerical data for 7 automobile brands including Acura, BMW, Mercedes-Benz, Honda, Toyota, Ford and Nissan. All the data is accessible from <a href="https://insights.alphonso.tv">Alphonso.tv</a>. The original data includes 23 columns, which describes the characteristic of the products, boardcasting time, show and network for each TV commercial of each brands. At last, a general method to discuss any group of brands will be developed.</p>
     <br>
     </div>
     <div>
@@ -79,7 +79,7 @@
       <br>
       <p class="bullet">&#9632 The general pattern of all seven automobile companies follows the discussion in Section 2.2, which indicates more number of airing happens in evening and weekend.</p>
       <p class="bullet">&#9632 There is obvious increase in number of airing during the day time of weekend, especially for Acura. </p>
-      <p class="bullet">&#9632 Compared to other brands, Mercedes-Benz has almost the same number of TV commercial airing during the morning and evening time, which indicates Mercedes-Benz has a relatively uniform pattern. Since the target customer of Mercedes-Benz is professionals/businessman, it may focus more on shows and network related to news which has more uniform broadcasting distribution in a day.</p>  
+      <p class="bullet">&#9632 Compared to other brands, Mercedes-Benz has almost the same number of TV commercial airing during the morning and evening time, which indicates Mercedes-Benz has a relatively uniform pattern. Since the target customer of Mercedes-Benz is professionals/businessman, it may focus more not only on shows and network in the evening, but also TV shows like news and golf game which has more uniform broadcasting distribution in a day.</p>  
       <p class="bullet">&#9632 Besides Saturday and Sunday, Nissan, Ford and Mercedes-Benz also have comparable number of airing on Monday and Tuesday.</p>
       <p class="bullet">&#9632 Honda and Acura have a similar time patten, while the time patterns of Ford, Toyota and Nissan are similar to each other.</p>
     </div>
@@ -127,7 +127,7 @@
       <br>
       <p class="bullet">&#9632 The number of TV commercial airing diffs obviously among different months. Compared to other months, August has relatively less number of airing especially for BMW.</p>
       <p class="bullet">&#9632 Ford and Nissan have a relatively uniform distribution in number of airing compared to other brands, although there is an obvious decrease in the first half of September for Nissan.</p>
-      <p class="bullet">&#9632 Except BMW and Nissan, all other brands have release their new products and started related TV commercial airing</p>
+      <p class="bullet">&#9632 Except BMW and Nissan, all other brands have released their new products and started related TV commercial airing</p>
       <p class="bullet">&#9632 Acura is the earliest brand to start the airing for its new products. The cumulative total number suggests that Acura has focused more on new products instead of products before 2017.</p>
       <p class="bullet">&#9632 Starting from September, Mercedes-Benz and Toyota also transfer their focus on the new products, while Ford just starts the TV commercial campaign for its new product. </p>
     </div>
@@ -144,7 +144,7 @@
         <p class="paragraph"> First, due to the limited length of the data (three-month time series data), only the weekly pattern will be discussed. Therefore, the time resolution to calculate the pattern is each weekday. Here I propose an airing pattern vector <a lang="latex">\vec{p}</a> as</p>
         <br>
         <p class="imgbox">
-        <img src="http://latex.codecogs.com/svg.latex?\vec{p}=p_{i*j}=C(i,j)"/>
+        <img src="http://latex.codecogs.com/svg.latex?\vec{p}=p_{i\crossj}=C(i,j)"/>
         </p>
         <br>
         <p class="paragraph"> where <a lang="latex">i</a> is the time resolution, <a lang="latex">j</a> is different labels like different hours of day, shows and network, <a lang="latex">C(i,j)</a> is the number of airing for label <a lang="latex">j</a> at time <a lang="latex">i</a>. As a result, the similarity coefficients between brands <a lang="latex">m</a> and <a lang="latex">n</a> are defined as</p> 
@@ -164,10 +164,12 @@
     <div>
     <p class="paragraph"><b>4. Summary</b></p>   
     <p class="paragraph">In this analysis, a method to quickly analyze and identify the similarity of the TV commercial airing pattern among different brands is proposed and shown by the discussion on the three-month TV commercial airing data for seven automobile brands. The method basically includes 4 steps:</p> 
-    <p class="bullet">&#9632 Calculate the aggregate result (the number of airing under different conditions) among different brands to show the general TV commercial airing.</p>
-    <p class="bullet">&#9632 Use the heapmap of the number of airing to identify the specific pattern on the proposed time resolution.</p>
+    <p class="bullet">&#9632 Calculate the aggregate result (the number of airing under different conditions) among different brands to show the general pattern of the TV commercial airing. This also provides a base case for other companies to compare to identify their own advantages or difference. For the seven automobile brands I discussed, the general pattern of TV commercial can be concluded into 4 words: evening, weekend, sports show and male target customers.</p>
+    <p class="bullet">&#9632 Use the heapmap of the number of airing to identify the specific pattern on the proposed time resolution. This helps understanding more detailed pattern for each brand and illustrate their difference in TV commercial airing. For example, in the analysis above, the heat map can quickly identify the special time pattern of Mercedes-Benz.</p>
     <p class="bullet">&#9632 Apply the time series of number of airing to show the peak of TV commercial campaign and the transition among old, current and new products.</p>
-    <p class="bullet">&#9632 Generate the airing pattern vector for each brand and calculate their similarity coefficients to quickly identify direct competitors (high similarity coefficients) in TV commercial campaign.</p>    
+    <p class="bullet">&#9632 Generate the airing pattern vector for each brand and calculate their similarity coefficients to quickly identify direct competitors (high similarity coefficients) in TV commercial campaign.</p> 
+    <br>
+    <p class="paragraph">This method can be applied for the TV commercial data of any brands or companies, which can help providing more insights through the TV airing data to help the operation of TV commercial campaign for each company.</p> 
     </div>
   </body>
 </html>
