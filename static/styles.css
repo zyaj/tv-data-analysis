@@ -1,0 +1,65 @@
+h1 {
+	color: black;
+	text-align: center;
+	width:50%;
+	margin:auto;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	width:30%;
+	margin:auto;
+	font-family: sans-serif;
+}
+
+p{
+	margin: auto;
+	padding-left: 0%;
+}
+
+.bottomln{
+	width:50%;
+	border-bottom: 1px solid black;
+}
+
+.paragraph{
+	width:70%;
+	text-align: left;
+	font-size: 20px;
+}
+
+.bullet{
+	width:70%;
+	text-align: left;
+	font-size: 18px;
+}
+
+.imginfo{
+	width:50%;
+	text-align: center;
+	font-size: 15px;
+}
+
+.imgbox{
+	text-align: center;
+}
+
+.filebox{
+	padding-left: 5%;
+}
+
+figure{
+    width: 25%;
+    float: left;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+a{
+	color:black;
+	font-family: cursive;
+	text-decoration: none;
+	font-size: 15px
+}
